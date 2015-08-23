@@ -38,6 +38,11 @@ class PyTest(TestCommand):
             errcode = pytest.main(self.test_args)
             sys.exit(errcode)
 
+#Parsing the requirements.txt file for install_requires
+from pip.req import parse_requirements
+install_reqs = parse_requirements("requirements.txt")
+REQUIREMENTS = [str(ir.req) for ir in install_reqs]
+
 setup(
       name='py-goldsberry',
       version=goldsberry.__version__,
@@ -46,7 +51,7 @@ setup(
       author='Bradley Fay',
       author_email='bradley.fay@gmail.com',
       tests_require=['pytest'],
-      install_requires=['requests>=2.7'],
+      install_requires=REQUIREMENTS
       description='API interface for stats.nba.com',
       long_description=readme, #+ '\n\n' + changelog,
       packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
