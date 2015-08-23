@@ -5,9 +5,9 @@ python:
   - "3.2"
   - "3.3"
 install:
-  - "pip install py-goldsberry -r requirements.txt"
+  - "pip install py-goldsberry"
 script:
-  - "python setup.py test"
+  - "py.text"
 branches:
   only:
     - master
