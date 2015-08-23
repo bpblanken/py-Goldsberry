@@ -5,8 +5,9 @@ python:
   - "3.2"
   - "3.3"
 install:
-  - "pip install py-goldsberry --use-mirrors"
-script: python tests/test_goldsberry.py
+  - "pip install py-goldsberry"
+script:
+  - "python setup.py test"
 branches:
   only:
     - master
