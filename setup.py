@@ -51,7 +51,7 @@ setup(
       author='Bradley Fay',
       author_email='bradley.fay@gmail.com',
       tests_require=['pytest'],
-      install_requires=REQUIREMENTS
+      install_requires=REQUIREMENTS,
       description='API interface for stats.nba.com',
       long_description=readme, #+ '\n\n' + changelog,
       packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
